@@ -1,0 +1,53 @@
+﻿@model  List<WebApplication1.Models.candidature>
+
+@{
+    ViewBag.Title = "List des Candidatures";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <script src="~/Scripts/Site.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/ListCand.css" />
+</head>
+<body>
+    <form class="form-center d-flex p-3" method="get" action="Search">
+        <input class="form-control me-sm-2 w-25" type="text" placeholder="Search">
+        <button class="btn btn-warning mx-2" type="submit">Search</button>
+    </form>
+
+
+    <table class="table table-active">
+        <thead class="table-warning">
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Niveau d’étude</th>
+                <th scope="col">Nombre d’années d’expérience</th>
+                <th scope="col">Email</th>
+                <th scope="col"><label class="col-form-label">CV</label> </th>
+                <th scope="col"><label class="col-form-label">Supprimer</label></th>
+            </tr>
+            @foreach(var items in Model)
+            {
+                <tr>
+                    <th scope="col">@items.nom</th>
+                    <th scope="col">@items.Prenom</th>
+                    <th scope="col">@items.Niveau_detude</th>
+                    <th scope="col">@items.nombre_danne_exp</th>
+                    <th scope="col">@items.email</th>
+
+                    <th scope="col"><button class="btn btn-warning" id="btnVisualiser">CV</button> </th>
+                    <th scope="col"><button class="btn btn-warning" >Supprimer</button></th>
+                </tr>
+            }
+        </thead>
+    </table>
+</body>
+</html>
+

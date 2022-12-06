@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url("~/img/cool-background.png");
+}
+
+fieldset {
+    display: block;
+    padding: 1.25rem;
+}
+
+
+
+.btn {
+    background-image: linear-gradient(to right, #f6d365 0%, #d5f83b 51%, #f6d365 100%);
+    border-color: transparent;
+    color: black;
+    width: fit-content;
+}
+
+
+    .btn:hover {
+        border-color: transparent;
+        border: solid 2px;
+    }
+
+form {
+    display: flex;
+    justify-content: center;
+}

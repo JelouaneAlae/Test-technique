@@ -1,0 +1,77 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/Scripts/Site.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    
+    <link rel="stylesheet" href="~/Content/AddCan.css" />
+</head>
+
+
+<body style="background: url('/img/cool-background.png');">
+
+        <form method="get" action="Home/AddCand">
+            <fieldset>
+                <div class="form-group ">
+                    <label class="col-form-label mt-3" for="Nom">Nom</label>
+                    <input type="text" class="form-control " name="txtNom" placeholder="Nom" id="txtNom">
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label mt-3" for="Prenom">Prenom</label>
+                    <input type="text" class="form-control " placeholder="Prenom" id="txtPrenom" name="txtPrenom">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label mt-3">Email address</label>
+                    <input type="email" class="form-control " id="txtEmail" name="txtemail" aria-describedby="emailHelp" placeholder="Enter email" name="txtEmail">
+                  
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label mt-3" for="Phone">Phone</label>
+                    <input type="number" class="form-control" placeholder="Phone" id="txtPhone" name="txtPhone">
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-form-label mt-3" for="Niveau d’étude">Niveau d’étude</label>
+                    <input type="text" class="form-control " placeholder="Niveau d’étude" id="txtNVdétude" name="txtNvEd ">
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label mt-3" for="Nombre d’années d’expérience">Nombre d’années d’expérience</label>
+                    <input type="number" class="form-control " placeholder="Nombre d’années d’expérience" id="txtNbrEx" name="txtNbrEx">
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label mt-3" for="Dernier employeur">Dernier employeur</label>
+                    <input type="text" class="form-control " placeholder="Dernier employeur" id="txtDernierEmployeur" name="txtDE">
+                </div>
+
+                <div class="form-group d-inline-block">
+                    <label for="formFile" class="form-label">Uploader votre cv</label>
+                    <div class="d-flex">
+                        <input class="form-control" type="file" id="CvFile" accept="application/pdf,image/*" name="fileCv">
+                        <input type="button" value="Visualiser" id="btnVisualiser" class="btn btn-primary mr-3" >
+                    </div>
+                    <button type="submit" id="btnSubmit" class="btn btn-primary mt-3 w-100">Submit</button>
+
+                </div>
+            </fieldset>
+
+        </form>
+   
+    </body>
+
+</html>
+
+

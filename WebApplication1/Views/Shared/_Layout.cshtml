@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+        <div class="container">
+            @Html.ActionLink("Test technique", "index", "Home", new { area = "" }, new { @class = "navbar-brand " })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse ">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark">@Html.ActionLink("Ajouter une candidature", "index", "Home", new { area = "" }, new { @class = "nav-link text-dark mb-3" }) </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">@Html.ActionLink("list des candidature", "Listcand", "Home", new { area = "" }, new { @class = "nav-link text-dark" })</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
